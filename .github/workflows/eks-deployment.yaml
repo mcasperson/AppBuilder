@@ -19,7 +19,7 @@ jobs:
           octopus_server: ${{ secrets.OCTOPUS_SERVER }}
           octopus_apikey: ${{ secrets.OCTOPUS_APIKEY }}
           octopus_space: "Octo App Builder"
-          octopus_user_id: "Users-141"
+          octopus_user_id: "Users-984"
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
@@ -32,7 +32,7 @@ jobs:
           octopus_space_id: ${{ steps.shared_space.outputs.octopus_space_id }}
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_region: "us-west-2"
+          aws_region: "us-west-1"
           github_username: ${{ github.actor }}
           github_repo: ${{ github.repository }}
 
@@ -45,7 +45,7 @@ jobs:
           octopus_space_id: ${{ steps.shared_space.outputs.octopus_space_id }}
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_region: "us-west-2"
+          aws_region: "us-west-1"
           aws_ecr_repository_name: "octopus-java-microservice"
 
       - name: Create Kubernetes Deployment Project
@@ -63,7 +63,7 @@ jobs:
           octopus_library_variable_set_id: ${{ steps.shared_resources.outputs.octopus_library_variable_set_id }}
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_region: "us-west-2"
+          aws_region: "us-west-1"
           repository_owner: ${{ github.repository_owner }}
           octopus_aws_account_id: ${{ steps.shared_resources.outputs.aws_account_id }}
 
@@ -73,4 +73,4 @@ jobs:
           image_tag: ${{ steps.ecr_resources.outputs.aws_ecr_repository_url }}
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_region: "us-west-2"
+          aws_region: "us-west-1"
