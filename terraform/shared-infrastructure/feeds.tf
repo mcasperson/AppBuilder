@@ -8,7 +8,7 @@ output "octopus_dockerhub_feed_id" {
 }
 
 resource "octopusdeploy_docker_container_registry" "github_docker_feed" {
-  feed_uri = "https://gchr.io"
+  feed_uri = "https://ghcr.io"
   name     = "GitHub Docker"
   password = var.github_feed_token
   username = var.github_username
